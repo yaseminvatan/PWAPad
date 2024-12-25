@@ -2,9 +2,17 @@ import { Workbox } from 'workbox-window';
 import Editor from './editor';
 import './database';
 import '../css/style.css';
+import {header} from './header';
 
 const main = document.querySelector('#main');
 main.innerHTML = '';
+
+// Function to load the header
+const loadHeader = () => {
+  const headerElement = document.createElement('pre'); // Use <pre> to preserve formatting
+  headerElement.textContent = header; // Add the header text
+  main.appendChild(headerElement); // Append to the main element
+};
 
 const loadSpinner = () => {
   const spinner = document.createElement('div');
@@ -16,6 +24,9 @@ const loadSpinner = () => {
   `;
   main.appendChild(spinner);
 };
+
+// Load the header first
+loadHeader();
 
 const editor = new Editor();
 
@@ -31,3 +42,4 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+console.log('Hello, Webpack!');

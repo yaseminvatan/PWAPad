@@ -8,16 +8,15 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = () => {
   return {
-    mode: 'development',
-    entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js',
-    },
-    
-    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-    },
+      mode: 'development',
+      entry: {
+        main: './src/js/index.js',
+        install: './src/js/install.js'
+      },
+      output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, '../client/dist'),
+      },
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
@@ -25,8 +24,9 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
+        swDest: 'service-worker.js',
       }),
+      
       new WebpackPwaManifest({
         name: 'Just Another Text Editor',
         short_name: 'JATE',
@@ -66,4 +66,6 @@ module.exports = () => {
       ],
     },
   };
+
 };
+console.log('Entry Path:', path.resolve(__dirname, './src/index.js'));
