@@ -29,7 +29,7 @@ This single-page application uses Webpack, Babel, and Workbox to deliver a seaml
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone (https://github.com/yaseminvatan/PWAPad.git)
    ```
 
 2. Navigate to the project directory:
@@ -109,7 +109,7 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ## Contribution
 
-Contributions are welcome! If you'd like to contribute, please open a pull request or issue on the [GitHub repository](<repository-url>).
+Contributions are welcome! If you'd like to contribute, please open a pull request or issue on the (https://github.com/yaseminvatan/PWAPad.git).
 
 ---
 
@@ -117,7 +117,7 @@ Contributions are welcome! If you'd like to contribute, please open a pull reque
 
 For any questions, feel free to contact the developer:
 
-- **GitHub**: [your-github-username](https://github.com/yaseminvatan)
+- **GitHub**: (https://github.com/yaseminvatan)
 
 ---
 
